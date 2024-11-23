@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CAADD0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Tekst për udhëzime -->
+    <TextView
+        android:id="@+id/verification_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the OTP code sent to your email"
+        android:textSize="18sp"
+        android:textColor="#121212"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Fusha për vendosjen e OTP -->
+    <EditText
+        android:id="@+id/otp_field"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Enter OTP"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textColorHint="#494848"
+        android:backgroundTint="#834C8A"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/verification_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Butoni për verifikim -->
+    <Button
+        android:id="@+id/verify_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Verify"
+        android:backgroundTint="#0019BA"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/otp_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Butoni për ridërgimin e OTP-së -->
+    <Button
+        android:id="@+id/resend_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Resend OTP"
+        android:backgroundTint="#B16A80"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/verify_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
